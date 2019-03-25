@@ -1,0 +1,11 @@
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Имя</th>
+  </tr>
+  <tr *ngFor="let student of students">
+    <td>{{student.id}}</td>
+    <td><input [(ngModel)]="student.name" type="text"/></td>
+    <td [class.grade]="student.grade > 3">{{student.grade}}</td>
+  </tr>
+</table>
