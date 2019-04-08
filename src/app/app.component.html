@@ -1,8 +1,24 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div>{{title}}</div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+        <a [routerLink]="[ '/' ]"> <i class="fa fa-home"></i> </a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+        <a [routerLink]="[ '/students' ]">Students</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+        <a [routerLink]="[ '/schedules' ]">Schedules</a>
+      </li>
 
-<app-students></app-students>
+    </ul>
+  </div>
+</nav>
+<div class="container mt-3">
+  <div class="col-md-12 col-xs-12 col-md-offset-2 push-md-2">
+
+    <router-outlet></router-outlet>
+
+  </div>
+</div>

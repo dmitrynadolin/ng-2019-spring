@@ -1,0 +1,24 @@
+<table class="table table-hover">
+
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col" style="width:80px"></th>
+      <th scope="col">Name</th>
+      <th scope="col" style="width:100px">Score</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let item of students">
+          <th scope="row">
+            
+              <a [routerLink]="[ item.id, 'edit' ]"><i class="fa fa-edit"></i></a>
+              <a [routerLink]="[ item.id, 'details' ]" class="ml-3"><i class="fa fa-info"></i></a>
+          </th>
+          <td>{{item.name}}</td>
+          <td style="text-align: right">{{item.score}}</td>
+
+        </tr>
+      
+  </tbody>
+
+</table>

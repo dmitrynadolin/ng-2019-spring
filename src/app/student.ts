@@ -1,5 +1,5 @@
 export class Student {
-    public id: string;
+    public id: number;
     public name: string;
-    public grade: number;
+    public score: number;
 }
