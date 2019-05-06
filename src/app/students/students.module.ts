@@ -6,6 +6,7 @@ import { StudentsRoutingModule } from './students-routing.module';
 import { StudentsListComponent } from './students-list/students-list.component';
 import { StudentComponent } from './student/student.component';
 import { StudentsLayoutComponent } from './students-layout/students-layout.component';
+import { StudentsService } from './students.service';
 
 @NgModule({
   declarations: [StudentsListComponent, StudentComponent, StudentsLayoutComponent],
@@ -13,6 +14,9 @@ import { StudentsLayoutComponent } from './students-layout/students-layout.compo
     CommonModule,
     StudentsRoutingModule,
     FormsModule
+  ],
+  providers:[
+    StudentsService
   ]
 })
 export class StudentsModule { }
