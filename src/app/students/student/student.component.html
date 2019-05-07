@@ -2,6 +2,10 @@
 <h2 *ngIf="action == 'details'">You are viewing {{student?.name}}</h2>
 
 
-<div [hidden]="action != 'edit'">Set score: <input type="text" [(ngModel)]="student.score"/></div>
+<div [hidden]="action != 'edit'">
+    
+    Set score: <input type="text" [(ngModel)]="student.score"/>
+    <button (click)="save()">save</button>
+</div>
 
 <div [hidden]="action != 'details'">Score is {{student.score}}</div>
